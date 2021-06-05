@@ -1,0 +1,18 @@
+{
+	"workbench.colorCustomizations": {
+		"[GitHub Dark]": {
+			"sideBar.background": "#141414",
+			"activityBar.activeBorder": "#ffffff",
+			"editor.background": "#0f0f0f",
+			"terminal.background": "#0f0f0f",
+			"tab.activeBackground": "#424242",
+			"panel.background": "#0f0f0f",
+			"statusBar.background": "#0f0f0f",
+			"minimap.background": "#141414",
+			"minimapSlider.background": "#424242ac"
+		},
+		"activityBar.background": "#4C1D31",
+		"titleBar.activeBackground": "#6B2945",
+		"titleBar.activeForeground": "#FCF8FA"
+	}
+}
