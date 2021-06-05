@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar />
-    <side-nav></side-nav>
+    
     <Nuxt />
      <Footer></Footer>
   </div>
@@ -9,9 +9,9 @@
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
-import SideNav from '~/components/SideNav.vue'
+
 export default {
-  components: { Navbar, Footer,SideNav },
+  components: { Navbar, Footer },
 }
 </script>,
     
