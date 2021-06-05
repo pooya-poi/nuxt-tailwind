@@ -16,7 +16,9 @@
                     hover:text-gray-700
                     dark:hover:text-gray-300
                   "
-                  >Brand</a
+                  >
+				  <logo class="w-72"></logo>
+				  </a
                 >
               </div>
 

@@ -2,7 +2,7 @@
   <div class="bg-gray-300 md:bg-yellow-300">
     <hero />
     <top-places />
-   
+   <featured/>
   </div>
 </template>
 

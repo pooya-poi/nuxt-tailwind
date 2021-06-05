@@ -4,7 +4,7 @@
 		<div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
 
 			<div class="xl:max-w-xl">
-				<img class="h-10" src="@/assets/img/logo.svg" alt="" />
+				<img class="h-10" src="@/assets/img/logo2.svg" alt="" />
 				<img class="mt-6 rounded-lg shadow-lg lg:hidden" src="@/assets/img/bg.jpg" alt="" />
 				<h1 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
 					Lorem ipsum dolor sit amet.

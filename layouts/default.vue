@@ -1,6 +1,7 @@
 <template>
   <div>
     <navbar />
+    <side-nav></side-nav>
     <Nuxt />
      <Footer></Footer>
   </div>
@@ -8,10 +9,12 @@
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+import SideNav from '~/components/SideNav.vue'
 export default {
-  components: { Navbar, Footer },
+  components: { Navbar, Footer,SideNav },
 }
-</script>
+</script>,
+    
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
