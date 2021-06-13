@@ -49,7 +49,7 @@
             <!-- nav links for smaller display  -->
             <!--start: Nav links -->
             <transition name="slide-fade">
-              <div v-show="navToggle" mode="in-out" class="nav-links flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+              <div v-if="navToggle" mode="in-out" class="nav-links flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
                 <nuxt-link class="nav-link" to="/">Home</nuxt-link>
                 <nuxt-link class="nav-link" to="shop">Shop</nuxt-link>
                 <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
@@ -62,14 +62,12 @@
                       <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
-
                   <input
                     type="text"
                     class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600"
                     placeholder="Search"
                   />
-                </div>
-                <!--// End: Search filed -->
+                </div> <!--// End: Search filed -->
                 <!--start: social icons -->
                 <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
                   <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit">
@@ -95,11 +93,10 @@
                       ></path>
                     </svg>
                   </a>
-                </div>
-                <!--// End: social icons -->
-              </div>
-              <!--//End: Nav links -->
+                </div> <!--// End: social icons -->
+              </div> <!--//End: Nav links -->  
             </transition>
+
           </div>
           <!--start: social icons -->
           <div class="hidden justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
