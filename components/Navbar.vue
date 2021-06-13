@@ -10,40 +10,44 @@
               </div>
 
               <!--Start: Mobile menu button -->
-              <div class="flex lg:hidden">
-                <button @click="navToggler" id="navToggle" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                    <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                  </svg>
-                </button>
-              </div>
+              <transition name="fade">
+                <div class="flex lg:hidden">
+                  <button @click="navToggler" id="navToggle" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                      <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </transition>
               <!--//End: Mobile menu button -->
             </div>
 
             <!--start: Nav links -->
-            <div v-show="navToggle" mode="in-out" class="nav-links flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-              <nuxt-link class="nav-link" to="/">Home</nuxt-link>
-              <nuxt-link class="nav-link" to="shop">Shop</nuxt-link>
-              <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
-              <nuxt-link class="nav-link" to="about">About</nuxt-link>
+            <transition name="slide-fade">
+              <div v-if="navToggle" mode="in-out" class="nav-links flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+                <nuxt-link class="nav-link" to="shop">Shop</nuxt-link>
+                <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
+                <nuxt-link class="nav-link" to="about">About</nuxt-link>
 
-              <!--start: Search filed -->
-              <div class="relative mt-4 lg:mt-0 lg:mx-4">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                  <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none">
-                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                </span>
+                <!--start: Search filed -->
+                <div class="relative mt-4 lg:mt-0 lg:mx-4">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none">
+                      <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
 
-                <input
-                  type="text"
-                  class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600"
-                  placeholder="Search"
-                />
+                  <input
+                    type="text"
+                    class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-600 bg-white border-b border-gray-600 dark:placeholder-gray-300 dark:focus:border-gray-300 lg:w-56 lg:border-transparent dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-gray-600"
+                    placeholder="Search"
+                  />
+                </div>
+                <!--// End: Search filed -->
               </div>
-              <!--// End: Search filed -->
-            </div>
             <!--//End: Nav links -->
+            </transition>
           </div>
 
           <!--start: social icons -->
@@ -90,15 +94,32 @@ export default {
   components: { Logo },
   methods: {
     navToggler: function () {
-        console.log('*** side nave')
-        this.navToggle = !this.navToggle
+      console.log('*** side nave')
+      this.navToggle = !this.navToggle
     },
   },
 }
 </script>
 
 <style lang="css" scoped>
-.nav-links{
-     transition: opacity .3s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  /* transition: all 0.6s cubic-bezier(1, 0.5, 0.8, 1); */
+  transition: all 0.3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
