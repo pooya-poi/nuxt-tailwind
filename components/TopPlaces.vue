@@ -43,7 +43,7 @@ export default {
       cities: [
         {
           id:1,
-          img: 'https://images.unsplash.com/photo-1473210630848-e12656228f26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=832&q=80',
+          img: 'https://source.unsplash.com/1600x900/?nature,water',
           name: 'tehran',
           price: 100
         },
