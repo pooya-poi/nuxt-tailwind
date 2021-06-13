@@ -14,9 +14,13 @@
     >
       <!-- <div class="w-1/3 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')"></div> -->
       <!-- <div class="w-1/3 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1448518340475-e3c680e9b4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80')"></div> -->
-      <div
+      <!-- <div
         class="w-1/3 bg-cover"
         :style="{ backgroundImage: `url('${img}')` }"
+      ></div> -->
+      <div
+        class="w-1/3 bg-cover"
+        :style="{ backgroundImage: `url('@/assets/img/city/${img}')` }"
       ></div>
 
       <div class="w-2/3 p-4 md:p-4">
