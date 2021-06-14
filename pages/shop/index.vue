@@ -13,22 +13,25 @@
     </div> -->
 
     <div class="container mx-auto lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-      <div class="hidden h-64 lg:block border-black border-solid border-2">left - Bottom</div>
+      <div class="hidden h-64 lg:block border-black border-solid border-2">
+        <!-- left - Bottom -->
+		<img class="h-full object-cover" src="@/assets/img/about.png" alt="">
+      </div>
       <div class="sm:mx-auto h-64 lg:mx-0 border-black border-solid border-2 col-span-2">
-		  <!-- right - Top -->
-		  <!-- <main-slider></main-slider> -->
+        <!-- right - Top -->
+        <!-- <main-slider></main-slider> -->
 
-<hooper>
-    <slide>
-      <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
-    </slide>
-    <slide>
-      slide 2
-    </slide>
-    ...
-  </hooper>
-
-	</div>
+        <hooper>
+          <slide>
+            <!-- <div class="bg-cover" style="background-image: url('https://source.unsplash.com/1600x901/?nature,water')"></div> -->
+			<img class="h-full object-cover" src="https://source.unsplash.com/1600x901/?nature,water" alt="" />
+          </slide>
+          <slide>
+            <img class="h-full object-cover" src="https://source.unsplash.com/1600x901/?nature,water" alt="" />
+          </slide>
+          ...
+        </hooper>
+      </div>
     </div>
 
     <!-- items -->
@@ -41,15 +44,13 @@
 </template>
 
 <script>
- import { Hooper, Slide } from 'hooper';
-  import 'hooper/dist/hooper.css';
+import { Hooper, Slide } from 'hooper'
+import 'hooper/dist/hooper.css'
 
 import mainSlider from '~/components/slider/mainSlider.vue'
 export default {
   data() {
     return {
-		
-
       sliderImage: [
         {
           id: 1,
@@ -107,7 +108,7 @@ export default {
       ],
     }
   },
-  components: { mainSlider,Hooper,Slide },
+  components: { mainSlider, Hooper, Slide },
 }
 </script>
 
