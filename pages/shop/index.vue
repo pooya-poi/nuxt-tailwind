@@ -12,32 +12,30 @@
 	  </div>
     </div> -->
 
-    <div class="container mx-auto lg:grid  lg:grid-cols-3 md:grid-cols-2 gap-10 ">
-
-
-
-      <div class="hidden h-48 lg:block border-black border-solid border-2 ">left - Bottom</div>
+    <div class="container mx-auto lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+      <div class="hidden h-48 lg:block border-black border-solid border-2">left - Bottom</div>
       <div class="sm:mx-auto h-48 lg:mx-0 border-black border-solid border-2 col-span-2">right - Top</div>
-
-
-	  
     </div>
 
-<!-- items -->
-<div class=" bg-yellow-400 py-10">
-	<div class="container mx-auto grid lg:grid md:grid-cols-2 lg:grid-cols-3  gap-10 text-center gap-y-4">
-		<div class="border-black border-solid border-2 mb-10 mx-4">1</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">2</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">3</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">4</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">5</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">6</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">7</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">8</div>
-		<div class="border-black border-solid border-2 mb-10 mx-4">9</div>
-	</div>
-</div>
-
+    <!-- items -->
+    <div class="bg-yellow-400 py-10">
+      <div class="container mx-auto grid lg:grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-center gap-y-4">
+        <div class="border-black border-solid border-2 mb-10 mx-4">
+			
+			<shop-card></shop-card>
+			
+			
+		</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">2</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">3</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">4</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">5</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">6</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">7</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">8</div>
+        <div class="border-black border-solid border-2 mb-10 mx-4">9</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,6 +59,44 @@ export default {
           id: 3,
           src: 'https://source.unsplash.com/1600x902/?computer-screen,',
           txt: 'Lorem ipsum dolor sit amet.',
+        },
+      ],
+      cities: [
+        {
+          id: 1,
+          img: 'tehran.jpg',
+          name: 'tehran',
+          price: 100,
+        },
+        {
+          id: 2,
+          img: 'hamedan.jpg',
+          name: 'hamedan',
+          price: 105,
+        },
+        {
+          id: 3,
+          img: 'tabriz.jpg',
+          name: 'tabriz',
+          price: 150,
+        },
+        {
+          id: 4,
+          img: 'rasht.jpg',
+          name: 'rasht',
+          price: 175,
+        },
+        {
+          id: 5,
+          img: 'ahvaz.jpg',
+          name: 'ahvaz',
+          price: 123,
+        },
+        {
+          id: 6,
+          img: 'shiraz.jpg',
+          name: 'shiraz',
+          price: 183,
         },
       ],
     }
