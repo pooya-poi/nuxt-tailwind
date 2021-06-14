@@ -1,7 +1,7 @@
 <template>
   <div>
     <VueSlickCarousel v-bind="settings" class="container slider lg:flex ">
-      <div class="bg-gray-700 text-white text-center h-72" v-for="img in sliderImage" :key="img.id">
+      <div class="bg-gray-700 text-white text-center h-64" v-for="img in sliderImage" :key="img.id">
         <div class="sliderbg w-full h-full object-contain object-center bg-no-repeat" :src="img.src" :style="{ backgroundImage: `url(${img.src})`, backgroundRepeate: 'no-repeate' }"></div>
         <h1 class="text-black">{{ img.txt }}</h1>
       </div>

@@ -13,37 +13,43 @@
     </div> -->
 
     <div class="container mx-auto lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-      <div class="hidden h-48 lg:block border-black border-solid border-2">left - Bottom</div>
-      <div class="sm:mx-auto h-48 lg:mx-0 border-black border-solid border-2 col-span-2">right - Top</div>
+      <div class="hidden h-64 lg:block border-black border-solid border-2">left - Bottom</div>
+      <div class="sm:mx-auto h-64 lg:mx-0 border-black border-solid border-2 col-span-2">
+		  <!-- right - Top -->
+		  <!-- <main-slider></main-slider> -->
+
+<hooper>
+    <slide>
+      <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+    </slide>
+    <slide>
+      slide 2
+    </slide>
+    ...
+  </hooper>
+
+	</div>
     </div>
 
     <!-- items -->
-    <div class="bg-yellow-400 py-10">
+    <div class="bg-yellow-400 py-10 bg-cover" :style="{ backgroundImage: `url(${require(`@/assets/img/bg-shop.jpg`)})` }">
       <div class="container mx-auto grid lg:grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-center gap-y-4">
-        <div class="border-black border-solid border-2 mb-10 mx-4">
-			
-			<shop-card></shop-card>
-			
-			
-		</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">2</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">3</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">4</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">5</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">6</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">7</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">8</div>
-        <div class="border-black border-solid border-2 mb-10 mx-4">9</div>
+        <div class="mb-10 mx-4" v-for="laptop in laptops" :key="laptop.id"><shop-card :title="laptop.name" :price="laptop.price" :img="laptop.img"></shop-card></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+ import { Hooper, Slide } from 'hooper';
+  import 'hooper/dist/hooper.css';
+
 import mainSlider from '~/components/slider/mainSlider.vue'
 export default {
   data() {
     return {
+		
+
       sliderImage: [
         {
           id: 1,
@@ -61,47 +67,47 @@ export default {
           txt: 'Lorem ipsum dolor sit amet.',
         },
       ],
-      cities: [
+      laptops: [
         {
           id: 1,
-          img: 'tehran.jpg',
-          name: 'tehran',
+          img: 'https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+          name: 'ASUS VivoBook 15 F515 Thin and Light Laptop, 15.6” FHD Display',
           price: 100,
         },
         {
           id: 2,
-          img: 'hamedan.jpg',
-          name: 'hamedan',
+          img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80',
+          name: '2021 Newest ASUS VivoBook 15.6" FHD Touchscreen Laptop',
           price: 105,
         },
         {
           id: 3,
-          img: 'tabriz.jpg',
-          name: 'tabriz',
+          img: 'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+          name: 'Apple 13.3" MacBook Pro with Touch Bar, Intel Core i5 Quad-Core',
           price: 150,
         },
         {
           id: 4,
-          img: 'rasht.jpg',
-          name: 'rasht',
+          img: 'https://images.unsplash.com/photo-1515343480029-43cdfe6b6aae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+          name: 'ASUS ZenBook 13 Ultra-Slim Laptop 13.3” Full HD NanoEdge Bezel Display',
           price: 175,
         },
         {
           id: 5,
-          img: 'ahvaz.jpg',
-          name: 'ahvaz',
+          img: 'https://images.unsplash.com/photo-1587614380862-0294308ae58b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+          name: '2020 Apple MacBook Air with Apple M1 Chip',
           price: 123,
         },
         {
           id: 6,
-          img: 'shiraz.jpg',
-          name: 'shiraz',
+          img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80',
+          name: 'Apple 13.3 inches MacBook Air with Retina Display',
           price: 183,
         },
       ],
     }
   },
-  components: { mainSlider },
+  components: { mainSlider,Hooper,Slide },
 }
 </script>
 
