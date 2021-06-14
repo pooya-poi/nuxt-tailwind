@@ -1,0 +1,17 @@
+<template>
+  <div class="bg-white rounded-lg shadow-lg">
+    <img src="@/assets/img/about.png" alt="" />
+    <h2 class="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl mt-4">title</h2>
+    <div class="flex justify-between mx-3 mt-8 pb-3">
+      <span class="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl">$1000.00</span>
+      <add-to-cart-btn></add-to-cart-btn>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="scss" scoped>
+</style>
