@@ -1,37 +1,24 @@
 <template>
   <div>
-    <!-- <div class="container sm:mx-auto justify-center lg:flex mt-10"> -->
-    <!-- <div class="grid lg:grid-cols-2 2xl:grid-cols-5">
-      
-      <div class="border-black border-solid border-2 w-3/4 h-52"></div>
-      <br class="mx-3" />
-      <div class="border-black border-solid border-2 w-1/4 h-52 flex flex-col px-1 py-1">
-	  	<div class="border-yellow-400 border-solid border-2 w-full h-1/2"></div>
-		  <br class="mb-1">
-	  	<div class="border-yellow-400 border-solid border-2 w-full h-1/2"></div>
-	  </div>
-    </div> -->
-
-    <div class="container mx-auto lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-      <div class="hidden h-64 lg:block border-black border-solid border-2">
-        <!-- left - Bottom -->
-		<img class="h-full object-cover" src="@/assets/img/about.png" alt="">
+  
+    <div class="container mx-auto my-8 lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+      <div class="hidden h-64 lg:block rounded-lg">
+        <img class="h-full object-cover rounded-lg" src="@/assets/img/about.png" alt="" />
       </div>
-      <div class="sm:mx-auto h-64 lg:mx-0 border-black border-solid border-2 col-span-2">
-        <!-- right - Top -->
-        <!-- <main-slider></main-slider> -->
-
-        <hooper>
-          <slide>
-            <!-- <div class="bg-cover" style="background-image: url('https://source.unsplash.com/1600x901/?nature,water')"></div> -->
-			<img class="h-full object-cover" src="https://source.unsplash.com/1600x901/?nature,water" alt="" />
+      <div class=" h-64 lg:block col-span-2 rounded-lg">
+       <hooper class="hooper-carousel object-cover rounded-lg " v-bind="settings">
+          <slide >
+            <img class="h-full w-full object-cover rounded-lg" src="https://source.unsplash.com/1600x256/?nature,water" alt="" />
           </slide>
           <slide>
-            <img class="h-full object-cover" src="https://source.unsplash.com/1600x901/?nature,water" alt="" />
+            <img class="h-full w-full object-cover rounded-lg" src="https://source.unsplash.com/1600x901/?nature,water" alt="" />
           </slide>
-          ...
+          <slide>
+            <img class="h-full w-full object-cover rounded-lg" src="https://source.unsplash.com/1600x902/?nature,water" alt="" />
+          </slide>
         </hooper>
       </div>
+      
     </div>
 
     <!-- items -->
@@ -51,6 +38,12 @@ import mainSlider from '~/components/slider/mainSlider.vue'
 export default {
   data() {
     return {
+      settings: {
+        centerMode: true,
+        wheelControl: false,
+        autoPlay: true,
+        playSpeed: 2000,
+      },
       sliderImage: [
         {
           id: 1,
@@ -112,5 +105,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.hooper-carousel{
+  height: 100%;
+}
 </style>
