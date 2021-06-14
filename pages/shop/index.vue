@@ -1,7 +1,10 @@
 <template>
 	<div>
 shop page
-<main-slider
+<div class=" flex content-center">
+
+<main-slider></main-slider>
+</div>
 	</div>
 </template>
 

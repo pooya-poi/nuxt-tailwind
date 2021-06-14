@@ -1,41 +1,40 @@
 <template>
   <div>
-	   <swiper
-    :slides-per-view="3"
-    :space-between="50"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    ...
-  </swiper>
+    <VueSlickCarousel v-bind="settings" class="slider">
+      <div><img class="w-60" src="https://source.unsplash.com/1600x900/?nature,water" alt="" /></div>
+      <div><img class="w-60" src="https://source.unsplash.com/1600x901/?nature,water" alt="" /></div>
+      <div><img class="w-60" src="https://source.unsplash.com/1600x902/?nature,water" alt="" /></div>
+      <div><img class="w-60" src="https://source.unsplash.com/1600x903/?nature,water" alt="" /></div>
+    </VueSlickCarousel>
   </div>
 </template>
 
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue'
-
-// Import Swiper styles
-import 'swiper/swiper.scss'
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-	 components: {
-      Swiper,
-      SwiperSlide,
-    },
-	  methods: {
-      onSwiper(swiper) {
-        console.log(swiper);
+  data() {
+    return {
+      settings: {
+     "dots": true,
+  "focusOnSelect": true,
+  "infinite": true,
+  "speed": 500,
+  "slidesToShow": 3,
+  "slidesToScroll": 3,
+  "touchThreshold": 5
       },
-      onSlideChange() {
-        console.log('slide change');
-      },
-    },
+    }
+  },
+  components: { VueSlickCarousel },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.slider{
+  border: 2px red solid;
+}
 </style>
