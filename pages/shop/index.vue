@@ -12,7 +12,7 @@
 	  </div>
     </div> -->
 
-    <div class="container mx-auto lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10 ">
+    <div class="container mx-auto lg:grid  lg:grid-cols-3 md:grid-cols-2 gap-10 ">
 
 
 
@@ -23,8 +23,20 @@
 	  
     </div>
 
-
-
+<!-- items -->
+<div class=" bg-yellow-400 py-10">
+	<div class="container mx-auto grid lg:grid md:grid-cols-2 lg:grid-cols-3  gap-10 text-center gap-y-4">
+		<div class="border-black border-solid border-2 mb-10 mx-4">1</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">2</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">3</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">4</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">5</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">6</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">7</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">8</div>
+		<div class="border-black border-solid border-2 mb-10 mx-4">9</div>
+	</div>
+</div>
 
   </div>
 </template>
