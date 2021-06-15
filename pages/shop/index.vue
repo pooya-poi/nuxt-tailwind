@@ -1,13 +1,12 @@
 <template>
   <div>
-  
     <div class="container mx-auto my-8 lg:grid lg:grid-cols-3 md:grid-cols-2 gap-10">
       <div class="hidden h-64 lg:block rounded-lg">
         <img class="h-full object-cover rounded-lg" src="@/assets/img/about.png" alt="" />
       </div>
-      <div class=" h-64 lg:block col-span-2 rounded-lg">
-       <hooper class="hooper-carousel object-cover rounded-lg " v-bind="settings">
-          <slide >
+      <div class="h-64 lg:block col-span-2 rounded-lg">
+        <hooper class="hooper-carousel object-cover rounded-lg" v-bind="settings">
+          <!-- <slide >
             <img class="h-full w-full object-cover rounded-lg" src="https://source.unsplash.com/1600x256/?nature,water" alt="" />
           </slide>
           <slide>
@@ -15,10 +14,15 @@
           </slide>
           <slide>
             <img class="h-full w-full object-cover rounded-lg" src="https://source.unsplash.com/1600x902/?nature,water" alt="" />
+          </slide> -->
+          <slide v-for="slide in sliderImage" :key="slide.id">
+            <nuxt-link to="1">
+            <img class="h-full w-full object-cover rounded-lg" :src="slide.src" alt="" />
+              <h2 class="absolute text-white bg-gray-700 text-center font-bold w-full bottom-0 bg-opacity-80 rounded-br-lg rounded-bl-lg h-10 pt-2">{{ slide.txt }}</h2>
+            </nuxt-link>
           </slide>
         </hooper>
       </div>
-      
     </div>
 
     <!-- items -->
@@ -48,17 +52,17 @@ export default {
         {
           id: 1,
           src: 'https://source.unsplash.com/1600x901/?keyboard-and-mouse',
-          txt: 'Lorem ipsum dolor sit amet.',
+          txt: 'This is the first slide image',
         },
         {
           id: 2,
           src: 'https://source.unsplash.com/1600x900/?computer-screen',
-          txt: 'Lorem ipsum dolor sit amet.',
+          txt: 'This the 2th slider image',
         },
         {
           id: 3,
           src: 'https://source.unsplash.com/1600x902/?computer-screen,',
-          txt: 'Lorem ipsum dolor sit amet.',
+          txt: 'And 4th slide',
         },
       ],
       laptops: [
@@ -106,7 +110,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.hooper-carousel{
+.hooper-carousel {
   height: 100%;
 }
 </style>
